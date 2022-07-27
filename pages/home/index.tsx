@@ -8,9 +8,15 @@ import Footer from "../../components/footer/Footer";
 import HeroSection from "../../components/hero-section/HeroSection";
 import { AppContext } from "../../components/hooks/AppContext.hook";
 import CollabModal from "../../components/collaborate/CollabModal";
+import LazyLoad from "react-lazyload";
+import useImagePreloader from "../../components/hooks/useImagePreloader";
+import { preloadSrcList } from "../../components/constants/imagePreload";
 
 const Home: NextPage = () => {
   const { display } = useContext(AppContext);
+
+  const { imagesPreloaded } = useImagePreloader(preloadSrcList);
+  // console.log(imagesPreloaded);
 
   return (
     <div
@@ -22,12 +28,18 @@ const Home: NextPage = () => {
       <Head>
         <title>Amayo Collins Portfolio</title>
       </Head>
-      <CollabModal />
-      <HeroSection />
-      <Skills />
-      <AboutMe />
-      <Projects />
-      <Footer />
+      {/* {!imagesPreloaded ? (
+        "loading..."
+      ) : ( */}
+      <LazyLoad>
+        <CollabModal />
+        <HeroSection />
+        <Skills />
+        <AboutMe />
+        <Projects />
+        <Footer />
+      </LazyLoad>
+      {/* )} */}
     </div>
   );
 };
