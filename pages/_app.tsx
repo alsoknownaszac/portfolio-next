@@ -35,9 +35,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     }
   }, []);
 
-  const { imagesPreloaded } = useImagePreloader(preloadSrcList);
+  // const { imagesPreloaded } = useImagePreloader(preloadSrcList);
 
-  if (imagesPreloaded) return;
+  // if (imagesPreloaded) return;
   return (
     <AppContext.Provider value={displayValue}>
       <Component {...pageProps} />
