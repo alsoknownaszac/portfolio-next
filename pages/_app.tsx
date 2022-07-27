@@ -3,6 +3,8 @@ import type { AppProps } from "next/app";
 import "tailwindcss/tailwind.css";
 import { useEffect, useMemo, useState } from "react";
 import { AppContext } from "../components/hooks/AppContext.hook";
+import useImagePreloader from "../components/hooks/useImagePreloader";
+import { preloadSrcList } from "../components/constants/imagePreload";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [display, setDisplay] = useState({
@@ -33,6 +35,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     }
   }, []);
 
+  const { imagesPreloaded } = useImagePreloader(preloadSrcList);
+
+  if (imagesPreloaded) return;
   return (
     <AppContext.Provider value={displayValue}>
       <Component {...pageProps} />

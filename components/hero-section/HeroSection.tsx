@@ -6,7 +6,7 @@ import SocialsLinkLg from "./SocialsLinkLg";
 import SocialsLinkSm from "./SocialsLinkSm";
 import { SocialMediaLinks } from "../constants/socialMediaLinks";
 
-export default function HeroSection() {
+function HeroSection() {
   const [mobileNavbarCollapsed, setMobileNavbarCollapsed] = useState(true);
   const [transparency, setTransparency] = useState(0.0);
 
@@ -25,9 +25,10 @@ export default function HeroSection() {
     return () =>
       window.removeEventListener("scroll", throttle(debounce(handleScroll)));
   }, []);
+
   return (
     <main
-      className={`bg-[url('/blackbg1.avif')] min-h-[53.1rem] 3xs:min-h-[59.1rem] lg:min-h-[82.4rem] xl:min-h-[102.4rem] bg-fixed bg-center bg-no-repeat bg-cover text-white relative`}
+      className={`bg-[url('https://res.cloudinary.com/dsf48vuu9/image/upload/v1658846274/blackbg1_joifip.avif')] min-h-[53.1rem] 3xs:min-h-[59.1rem] lg:min-h-[82.4rem] xl:min-h-[102.4rem] bg-fixed bg-center bg-no-repeat bg-cover text-white relative`}
     >
       <div
         style={
@@ -52,7 +53,7 @@ export default function HeroSection() {
           </h1>
         </section>
       </div>
-      <div className="bg-[url('/officesetup.avif')] hidden 3xs:block h-[14.9rem] w-[25.6rem] 2xs:h-[16.9rem] 2xs:w-[27.6rem] xs:h-[20.9rem] xs:w-[32rem] sm:h-[23rem] sm:w-[35rem] lg:h-[34.815rem] lg:w-[50.8rem] xl:h-[34.815rem] xl:w-[64.8rem] hero-img absolute top-[55%] right-[5%] xs:top-[50%] sm:top-[48.5%] md:top-[46%] sm:right-[8%] lg:top-[48.5%] lg:right-[19%] xl:top-[45%] xl:right-[18%] z-10 bg-fixed bg-center bg-no-repeat bg-cover " />
+      <div className="bg-[url('https://res.cloudinary.com/dsf48vuu9/image/upload/v1658846270/officesetup_h0ejo4.avif')] hidden 3xs:block h-[14.9rem] w-[25.6rem] 2xs:h-[16.9rem] 2xs:w-[27.6rem] xs:h-[20.9rem] xs:w-[32rem] sm:h-[23rem] sm:w-[35rem] lg:h-[34.815rem] lg:w-[50.8rem] xl:h-[34.815rem] xl:w-[64.8rem] hero-img absolute top-[55%] right-[5%] xs:top-[50%] sm:top-[48.5%] md:top-[46%] sm:right-[8%] lg:top-[48.5%] lg:right-[19%] xl:top-[45%] xl:right-[18%] z-10 bg-fixed bg-center bg-no-repeat bg-cover " />
 
       <div className="absolute bottom-[11.5%] 2xs:bottom-[5.5%] sm:bottom-[7.5%] left-[10%] z-10 ">
         <div className=" relative flex justify-center h-[9rem] xs:h-[12rem] lg:h-[18.5rem] hero-img">
@@ -73,4 +74,5 @@ export default function HeroSection() {
   );
 }
 
+export default HeroSection;
 // mt-[6.7rem] lg:mt-[11.55rem]

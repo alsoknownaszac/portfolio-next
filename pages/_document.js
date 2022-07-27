@@ -11,22 +11,22 @@ export default function Document() {
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="preload"
-          href="https://alsoknownaszac.me/alsoknownaszac.avif"
+          href="https://res.cloudinary.com/dsf48vuu9/image/upload/v1658846274/blackbg1_joifip.avif"
           as="image"
         ></link>
         <link
           rel="preload"
-          href="https://alsoknownaszac.me/blackbg1.avif"
+          href="https://res.cloudinary.com/dsf48vuu9/image/upload/v1658846273/blackbg2_ppaprd.avif"
           as="image"
         ></link>
         <link
           rel="preload"
-          href="https://alsoknownaszac.me/blackbg2.avif"
+          href="https://res.cloudinary.com/dsf48vuu9/image/upload/v1658846270/officesetup_h0ejo4.avif"
           as="image"
         ></link>
         <link
           rel="preload"
-          href="https://alsoknownaszac.me/officestup.avif"
+          href="https://res.cloudinary.com/dsf48vuu9/image/upload/v1658846270/alsoknownaszac_sldfpk.avif"
           as="image"
         ></link>
         <link
