@@ -26,9 +26,11 @@ const Home: NextPage = () => {
       <Head>
         <title>Amayo Collins Portfolio</title>
       </Head>
-      {!imagesPreloaded ? (
-        <div className="h-screen w-screen flex justify-center items-center text-[2rem]">
-          alsoknownaszac will be with you shortly....
+      {imagesPreloaded ? (
+        <div className="h-screen w-screen flex justify-center items-center ">
+          <div className="w-[60%] text-[1.8rem] sm:text-[2rem]">
+            alsoknownaszac will be with you shortly....
+          </div>
         </div>
       ) : (
         <>
