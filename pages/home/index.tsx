@@ -28,7 +28,7 @@ const Home: NextPage = () => {
       </Head>
       {imagesPreloaded ? (
         <div className="h-screen w-screen flex justify-center items-center ">
-          <div className="w-[60%] text-[1.8rem] sm:text-[2rem]">
+          <div className="w-[60%] md:w-fit text-[1.8rem] sm:text-[2rem]">
             alsoknownaszac will be with you shortly....
           </div>
         </div>
