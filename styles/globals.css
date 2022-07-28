@@ -210,6 +210,21 @@ a {
   animation-name: slideOutRight;
 }
 
+.lazyload {
+  opacity: 0;
+}
+
+.lazyloading {
+  opacity: 0.5;
+  transition: opacity 100ms;
+  /* background: #f7f7f7 url(preloader.gif) no-repeat center; */
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
 @media screen and (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;

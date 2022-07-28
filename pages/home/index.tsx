@@ -16,7 +16,6 @@ const Home: NextPage = () => {
   const { display } = useContext(AppContext);
 
   const { imagesPreloaded } = useImagePreloader(preloadSrcList);
-  // console.log(imagesPreloaded);
 
   return (
     <div
@@ -28,18 +27,20 @@ const Home: NextPage = () => {
       <Head>
         <title>Amayo Collins Portfolio</title>
       </Head>
-      {/* {!imagesPreloaded ? (
-        "loading..."
-      ) : ( */}
-      <LazyLoad>
-        <CollabModal />
-        <HeroSection />
-        <Skills />
-        <AboutMe />
-        <Projects />
-        <Footer />
-      </LazyLoad>
-      {/* )} */}
+      {!imagesPreloaded ? (
+        <div className="h-screen w-screen flex justify-center items-center text-[2rem]">
+          alsoknownaszac will be with you shortly....
+        </div>
+      ) : (
+        <>
+          <CollabModal />
+          <HeroSection />
+          <Skills />
+          <AboutMe />
+          <Projects />
+          <Footer />
+        </>
+      )}
     </div>
   );
 };
